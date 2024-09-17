@@ -12,14 +12,20 @@ class _LoadingState extends State<Loading> {
 
   String time='loading';
 
-  void setupTime() async {
-  WorldTime obj = WorldTime(location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
-  await obj.getTime(obj.url); // Wait for getTime() to complete
-  //print(obj.time);
-   setState(() {
+ void setupTime() async {
+  try {
+    WorldTime obj = WorldTime(location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
+    await obj.getTime(); 
+    setState(() {
       time = obj.time;
     });
+  } catch (e) {
+    print('Error: $e');
+    setState(() {
+      time = 'Error: $e';
+    });
   }
+}
   
 
 
