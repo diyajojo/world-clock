@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -21,16 +22,18 @@ Map finaldata={};
     //print(finaldata);
 
  // setting background
-  String bgImg = finaldata['isDay'] != null ? (finaldata['isDay'] ? 'day.jpg' : 'night.jpeg') : 'night.jpeg';
+  
 
  return Scaffold(
   body: Container(
     decoration: BoxDecoration(
       image: DecorationImage(
-        image: AssetImage('assets/$bgImg'), // Use the bgImg variable here
-        fit: BoxFit.cover,
+         image: finaldata['isDay']
+            ? AssetImage('assets/day.jpg')
+            : AssetImage('assets/night.jpeg'),
+          fit: BoxFit.cover,
+        ),
       ),
-    ),
 
       child: SafeArea(
         child: Padding(
