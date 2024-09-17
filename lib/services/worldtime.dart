@@ -11,13 +11,10 @@ class WorldTime
 
   WorldTime({ required this.location, required this.flag, required this.url });
 
-  getTime(String url) {}
-
-}
 
 // making http request to api
-Future <void> getTime(WorldTime url) async{
-  Response res = await get(Uri.parse('http://worldtimeapi.org/api/timezone/${url}')); // string is converted to uri object which is expected type of get funciton
+Future <void> getTime() async{
+  Response res = await get(Uri.parse('http://worldtimeapi.org/api/timezone/$url')); // string is converted to uri object which is expected type of get funciton
 
   Map data = jsonDecode(res.body); // json to map 
   // print(data);
@@ -32,6 +29,6 @@ Future <void> getTime(WorldTime url) async{
     now = now.add(Duration(hours: int.parse(offset)));
     // print(now);
 
-    // ignore: unused_local_variable
-    var time=now.toString();
+     time=now.toString();
+}
 }
