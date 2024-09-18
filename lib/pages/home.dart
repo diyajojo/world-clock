@@ -29,8 +29,8 @@ Map finaldata={};
     decoration: BoxDecoration(
       image: DecorationImage(
          image: finaldata['isDay']
-            ? AssetImage('assets/day.jpg')
-            : AssetImage('assets/night.jpeg'),
+            ? const AssetImage('assets/day.jpg')
+            : const AssetImage('assets/night.jpeg'),
           fit: BoxFit.cover,
         ),
       ),
@@ -48,35 +48,43 @@ Map finaldata={};
                         finaldata = {
                           'time': result['time'],
                           'location': result['location'],
-                          'isDaytime': result['isDay'],
+                          'isDay': result['isDay'],
                           'flag': result['flag']
                         };
                       });
                     }
                   },
-                icon: Icon(Icons.edit_location),
-                label: Text(
-                  'Edit Location'
+                icon: const Icon(
+                  Icons.edit_location,
+                  color: Colors.white,
+                  ),
+                label: const Text(
+                  'Edit Location',
+                  style: TextStyle(color: Colors.white),
                 )
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    finaldata['location'],
-                    style: TextStyle(
-                      fontSize: 28.0,
+                    finaldata['location'].toUpperCase(),
+                    style: const TextStyle(
+                      fontSize: 40.0,
                       letterSpacing: 2.0,
+                      fontFamily: 'SignikaNegative',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Text(
                 finaldata['time'],
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 66.0,
+                  color: Colors.white,
                 )
               ),
             ],
