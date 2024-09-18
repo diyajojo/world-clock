@@ -1,16 +1,9 @@
-# worldclock
+World Clock App
+A Flutter-based World Clock App that displays the current time and location. 
 
-A new Flutter project.
+Getting Started
+To get started with the World Clock App, follow these steps:
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository: git clone https://github.com/your-username/world-clock-app.git
+2. Open the project in your preferred IDE or code editor.
+3. Run the app on an emulator or physical device: flutter run
