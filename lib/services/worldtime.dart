@@ -8,7 +8,6 @@ class WorldTime
   late String time; // the time in that location
   late String flag; // url to an asset flag icon
   late String url; // location url for api endpoint
-  late bool isDay;
 
   WorldTime({ required this.location, required this.flag, required this.url });
 
@@ -33,7 +32,6 @@ Future <void> getTime() async{
 
     // set the time property formatted using intl
       
-      isDay= now.hour > 6 && now.hour < 20 ? true : false;
       time = DateFormat.jm().format(now);
 }
 }

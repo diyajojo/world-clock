@@ -31,7 +31,6 @@ class _LocationState extends State<Location> {
     WorldTime(url: 'Asia/Hong_Kong', location: 'Hong Kong', flag: 'hongkong.jpg'),
      WorldTime(url: 'Australia/Melbourne', location: 'Melbourne', flag: 'melbourne.png'),
     WorldTime(url: 'Australia/Perth', location: 'Perth', flag: 'perth.png'),
-    WorldTime(url: 'America/Chicago', location: 'Chicago', flag: 'chicago.webp'),
     WorldTime(url: 'Australia/Sydney', location: 'Sydney', flag: 'sydney.png'),
     WorldTime(url: 'Europe/Rome', location: 'Rome', flag: 'rome.jpeg'),
     WorldTime(url: 'America/Jamaica', location: 'Jamaica', flag: 'jamaica.jpg'),
@@ -51,7 +50,7 @@ class _LocationState extends State<Location> {
       'location': obj.location,
       'time': obj.time,
       'flag': obj.flag,
-      'isDay': obj.isDay,
+  
     });
   } 
 

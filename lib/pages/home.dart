@@ -10,34 +10,25 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  Map finaldata = {
+    'location': 'WORLD CLOCK APP',
+    'time': '',
+  };
 
-Map finaldata={};
-
-
- @override
+  @override
   Widget build(BuildContext context) {
-     
-    //ModalRoute returns an object but its cast to map ,used to fetch arguments passed to navigator in loading.dart
-    finaldata=finaldata.isNotEmpty ? finaldata :ModalRoute.of(context)?.settings.arguments as Map<dynamic, dynamic>;
-    //print(finaldata);
-
- // setting background
-  
-
- return Scaffold(
+   return Scaffold(
   body: Container(
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
       image: DecorationImage(
-         image: finaldata['isDay']
-            ? const AssetImage('assets/day.jpg')
-            : const AssetImage('assets/night.jpeg'),
+         image: AssetImage('assets/bg.jpg'),
           fit: BoxFit.cover,
         ),
       ),
 
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 200.0, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 300.0, 0, 0),
           child: Column(
             children: <Widget>[
               TextButton.icon(
@@ -48,7 +39,6 @@ Map finaldata={};
                         finaldata = {
                           'time': result['time'],
                           'location': result['location'],
-                          'isDay': result['isDay'],
                           'flag': result['flag']
                         };
                       });
@@ -81,11 +71,13 @@ Map finaldata={};
               ),
               const SizedBox(height: 20.0),
               Text(
-                finaldata['time'],
+                finaldata['time'].toUpperCase(),
                 style: const TextStyle(
-                  fontSize: 66.0,
+                  fontSize: 40.0,
                   color: Colors.white,
-                )
+                  fontFamily: 'SignikaNegative',
+                ),
+                textAlign: TextAlign.center,
               ),
             ],
           ),

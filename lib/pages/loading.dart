@@ -33,7 +33,6 @@ class _LoadingState extends State<Loading> {
     'location' : obj.location,
     'flag' : obj.flag,
     'time' : obj.time,
-    'isDay': obj.isDay,
   });
 }
 
