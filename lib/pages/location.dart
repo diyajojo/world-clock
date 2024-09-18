@@ -59,9 +59,9 @@ class _LocationState extends State<Location> {
     locations.sort((a, b) => a.location.compareTo(b.location));
 
       return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[400],
       appBar: AppBar(
-        backgroundColor: Colors.redAccent[100],
+        backgroundColor: Colors.grey[600],
         title: const Text('Choose a Location'),
         centerTitle: true,
         elevation: 0,
@@ -71,6 +71,7 @@ class _LocationState extends State<Location> {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 4.0),
+            
             child: Card(
               child: ListTile(
                 onTap: () {
