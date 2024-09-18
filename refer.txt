@@ -4,3 +4,5 @@ In Flutter, initState is a special method that's called when a widget is first i
 utc_offset: +01:00
 now = now.add(Duration(hours: int.parse(offset)));
 So, in summary, this line of code takes the now DateTime object and adds a duration to it, where the duration is equal to the UTC offset parsed from the offset string. This effectively adjusts the now date and time to account for the UTC offset.
+intl package is used here for date and time formatting 
+import 'package:flutter_spinkit/flutter_spinkit.dart'; USED FOR SPINNERS AND LOADERS
